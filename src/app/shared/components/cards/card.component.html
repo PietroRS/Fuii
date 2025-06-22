@@ -1,0 +1,13 @@
+<div class="card-container row align-items-center p-4 rounded shadow-sm my-4 flex-lg-nowrap flex-wrap"
+     [ngClass]="{ 'flex-row-reverse': reverse }">
+
+  <div class="col-lg-6 d-flex justify-content-center align-items-center">
+    <img [src]="imageSrc" [alt]="title" class="card-img img-fluid shadow-sm">
+  </div>
+
+  <div class="col-lg-6 text-center text-lg-start px-4">
+    <h4 class="fw-bold mb-3">{{ title }}</h4>
+    <p>{{ description }}</p>
+  </div>
+
+</div>

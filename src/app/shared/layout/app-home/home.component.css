@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+}
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.partner-card {
+  width: 220px;
+  height: 260px;
+  background: #00293f;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(2, 152, 221, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(2, 152, 221, 0.5);
+}
+
+.partner-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}

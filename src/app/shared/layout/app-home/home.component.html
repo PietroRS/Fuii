@@ -1,0 +1,60 @@
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="height: 777px; color: #00293f;">
+  <h1 class="mb-5 text-center" style="font-weight: bold;">
+    Benvenuto su <span style="color: #0298dd;">Fluï</span>
+  </h1>
+
+  <div class="row align-items-center shadow-sm p-4 rounded bg-white w-100" style="max-width: 900px;">
+    <div class="col-md-6 text-center mb-4 mb-md-0">
+      <img
+        src="/assets/banca-app.png"
+        alt="Banca App"
+        class="img-fluid rounded shadow"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+    <div class="col-md-6">
+      <h3 class="mb-3 text-center text-md-start">Cos'è quest'app?</h3>
+      <p class="text-center text-md-start">
+        Quest'app di pagamenti ti consente di effettuare pagamenti o ricevere accrediti in modo semplice,
+        veloce e sicuro. Registrati o accedi per iniziare.
+      </p>
+      <div class="d-flex gap-3 justify-content-center justify-content-md-start mt-4">
+        <a routerLink="/auth/login" class="btn" style="background-color: #00293f; color: white; border: none;">
+          Login
+        </a>
+        <a routerLink="/auth/register" class="btn" style="background-color: #00293f; color: white; border: none;">
+          Registrati
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid px-3 my-5" style="color: #00293f;">
+  <app-card
+    *ngFor="let card of cards"
+    [imageSrc]="card.imageSrc"
+    [title]="card.title"
+    [description]="card.description"
+    [reverse]="card.reverse">
+  </app-card>
+</div>
+
+
+<div class="container-fluid my-5">
+  <h2 class="text-center fw-bold mb-4" style="color: #00293f;">I nostri partner</h2>
+
+  <div class="row justify-content-center gap-4 px-3">
+    <div
+      class="partner-card d-flex flex-column align-items-center justify-content-center text-white"
+      *ngFor="let partner of partners"
+    >
+      <img [src]="partner.logo" [alt]="partner.name" class="partner-logo mb-3" />
+      <h5 class="fw-bold">{{ partner.name }}</h5>
+      <small>{{ partner.type }}</small>
+    </div>
+  </div>
+</div>
+
+

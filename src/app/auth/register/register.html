@@ -1,0 +1,111 @@
+<div class="login-wrapper d-flex justify-content-center align-items-center">
+  <div class="login-card text-center p-4 shadow d-flex flex-column justify-content-center align-items-center">
+    <h3 class="login-title mb-4">
+      Registrati su <span style="color: #0298dd;">Fluii</span>
+    </h3>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form w-100" style="max-width: 320px;">
+
+      <!-- NOME -->
+      <div class="mb-3 position-relative">
+        <div *ngIf="registerForm.get('nome')?.invalid && registerForm.get('nome')?.touched"
+             class="text-danger small mb-1 position-absolute" style="top: -1.2rem;">
+          Il nome è obbligatorio
+        </div>
+        <input type="text" formControlName="nome" placeholder="Nome" class="form-control" />
+      </div>
+
+      <!-- COGNOME -->
+      <div class="mb-3 position-relative">
+        <div *ngIf="registerForm.get('cognome')?.invalid && registerForm.get('cognome')?.touched"
+             class="text-danger small mb-1 position-absolute" style="top: -1.2rem;">
+          Il cognome è obbligatorio
+        </div>
+        <input type="text" formControlName="cognome" placeholder="Cognome" class="form-control" />
+      </div>
+
+      <!-- EMAIL -->
+      <div class="mb-3 position-relative">
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
+             class="text-danger small mb-1 position-absolute" style="top: -1.2rem;">
+          Inserisci un'email valida
+        </div>
+        <input type="email" formControlName="email" placeholder="Email" class="form-control" />
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="mb-4 position-relative">
+        <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+             class="text-danger small mb-1 position-absolute" style="top: -1.2rem;">
+          La password è obbligatoria
+        </div>
+        <input type="password" formControlName="password" placeholder="Password" class="form-control" />
+      </div>
+
+      <!-- RUOLO -->
+      <app-checkbox-role [control]="ruoloControl"></app-checkbox-role>
+
+      <!-- FIELDS FOR PAYER -->
+      <div *ngIf="ruoloControl.value === 'PAYER'">
+        <div class="mt-3 mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('fiscalCode')?.invalid && registerForm.get('fiscalCode')?.touched">
+            Il codice fiscale è obbligatorio
+          </div>
+          <input type="text" formControlName="fiscalCode" placeholder="Codice Fiscale" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('birthDate')?.invalid && registerForm.get('birthDate')?.touched">
+            La data di nascita è obbligatoria
+          </div>
+          <input type="date" formControlName="birthDate" placeholder="Data di nascita" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('iban')?.invalid && registerForm.get('iban')?.touched">
+            L'IBAN è obbligatorio
+          </div>
+          <input type="text" formControlName="iban" placeholder="IBAN" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('address')?.invalid && registerForm.get('address')?.touched">
+            L'indirizzo è obbligatorio
+          </div>
+          <input type="text" formControlName="address" placeholder="Indirizzo" class="form-control" />
+        </div>
+      </div>
+
+
+      <div *ngIf="ruoloControl.value === 'SHOP' || ruoloControl.value === 'PAYMENT_PROVIDER'">
+        <div class="mt-3 mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('vatCode')?.invalid && registerForm.get('vatCode')?.touched">
+            La Partita IVA è obbligatoria
+          </div>
+          <input type="text" formControlName="vatCode" placeholder="Partita IVA" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <div class="text-danger small mb-1 text-start" *ngIf="registerForm.get('shopAddress')?.invalid && registerForm.get('shopAddress')?.touched">
+            L'indirizzo è obbligatorio
+          </div>
+          <input type="text" formControlName="shopAddress" placeholder="Indirizzo" class="form-control" />
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn w-100 mb-3" style="background-color: #00293f; color: white;">
+        Registrati
+      </button>
+    </form>
+
+    <div class="w-100 text-start" style="max-width: 320px;">
+      <small>
+        Hai già un account?
+        <a routerLink="/auth/login" style="color: #0298dd; text-decoration: underline;">
+          Accedi qui
+        </a>
+      </small>
+    </div>
+  </div>
+</div>

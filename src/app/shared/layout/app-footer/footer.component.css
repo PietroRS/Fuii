@@ -1,0 +1,14 @@
+.footer {
+  border-top: 2px solid #00293f;
+  font-size: 0.9rem;
+  color: #fff;
+background: #00293f;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+
+  span {
+    font-weight: bold;
+    color: #fff;
+  }
+}

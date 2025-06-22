@@ -1,0 +1,20 @@
+.card-container {
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.card-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-img {
+  display: block;
+  max-height: 250px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 12px;
+}

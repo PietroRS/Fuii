@@ -1,0 +1,171 @@
+.highlight-pay {
+  color: #0298dd; // blu fluo
+font-weight: bold;
+}
+
+.navbar {
+  border-bottom: 4px solid #00f0ff;
+  box-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff, 0 0 36px #00f0ff;
+}
+
+.btn-logout {
+  background-color: #0298dd;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 8px #0298dd, 0 0 16px #0298dd;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: #0298dd; // variante leggermente più scura per hover
+  box-shadow: 0 0 12px #0298dd, 0 0 24px #0298dd;
+  }
+}
+
+.glow-pulse {
+  color: #d9e0e0;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #f5f9fa,
+    0 0 10px #fcfcfc68,
+    0 0 15px #f9f9f9;
+  animation: pulseGlow 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ffffff,
+      0 0 15px #fefefe;
+    transform: scale(1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 20px #ffffff,
+      0 0 30px #ffffff;
+    transform: scale(1.05);
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px #fdfdfd,
+      0 0 10px #ffffff,
+      0 0 15px #ffffff;
+    transform: scale(1);
+  }
+}
+
+.glow-white {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #cccccc,
+    0 0 15px #cccccc;
+}
+.highlight-pay {
+  color: #0298dd; // blu fluo
+font-weight: bold;
+}
+
+.navbar {
+  border-bottom: 4px solid #00f0ff;
+  box-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff, 0 0 36px #00f0ff;
+}
+
+.btn-logout {
+  background-color: #0298dd;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 8px #0298dd, 0 0 16px #0298dd;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: #0298dd; // variante leggermente più scura per hover
+  box-shadow: 0 0 12px #0298dd, 0 0 24px #0298dd;
+  }
+}
+
+.glow-pulse {
+  color: #d9e0e0;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #f5f9fa,
+    0 0 10px #fcfcfc68,
+    0 0 15px #f9f9f9;
+  animation: pulseGlow 1.2s infinite ease-in-out;
+}
+.nav-underline-btn {
+  font-size: 16px;
+  color: #e1e1e1;
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-underline-btn:hover,
+.nav-underline-btn:focus {
+  color: #ffffff;
+}
+
+.nav-underline-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+  left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-underline-btn:hover::after,
+.nav-underline-btn:focus::after {
+  width: 100%;
+  left: 0%;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ffffff,
+      0 0 15px #fefefe;
+    transform: scale(1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 20px #ffffff,
+      0 0 30px #ffffff;
+    transform: scale(1.05);
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px #fdfdfd,
+      0 0 10px #ffffff,
+      0 0 15px #ffffff;
+    transform: scale(1);
+  }
+}
+
+.glow-white {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #cccccc,
+    0 0 15px #cccccc;
+}

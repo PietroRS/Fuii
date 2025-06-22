@@ -1,0 +1,21 @@
+<ng-container *ngIf="control">
+  <div class="roles-container d-flex justify-content-center gap-4 flex-wrap">
+    <div *ngFor="let role of roles" class="checkbox-wrapper-12 text-center">
+      <div class="cbx">
+        <input
+          type="radio"
+          [id]="role.id"
+          [value]="role.value"
+          [formControl]="control"
+        />
+        <label [for]="role.id"></label>
+        <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+          <path d="M2 8.36364L6.23077 12L13 2"></path>
+        </svg>
+      </div>
+      <div class="mt-2 fw-bold" style="color: #00293f;">
+        {{ role.label }}
+      </div>
+    </div>
+  </div>
+</ng-container>

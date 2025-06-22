@@ -1,0 +1,51 @@
+.checkbox-wrapper-12 .cbx input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #0298dd;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-wrapper-12 .cbx input[type="radio"]:checked {
+  background-color: #0298dd;
+}
+
+.checkbox-wrapper-12 .cbx input[type="radio"]:checked + label + svg path {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-12 .cbx label {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.checkbox-wrapper-12 .cbx svg {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.checkbox-wrapper-12 .cbx svg path {
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 19;
+  stroke-dashoffset: 19;
+  transition: stroke-dashoffset 0.3s ease;
+  transition-delay: 0.2s;
+}
